@@ -8,8 +8,8 @@ fun main() {
         Jsoup.connect("https://mybook.ru/author/duglas-adams/avtostopom-po-galaktike-restoran-u-konca-vselennoj/citations/")
             .get()
 
-    val searchClass = ".sc-2aegk7-2"
-    val quoteElements = doc.select(searchClass)
+    val searchTag = "article"
+    val quoteElements = doc.select(searchTag)
     for (element in quoteElements) {
         println(element.text())
     }
